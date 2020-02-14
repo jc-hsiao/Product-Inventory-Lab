@@ -35,7 +35,5 @@ public class PrinterTest {
         Assertions.assertEquals(expectedWifiAbility, p.CanWorkWithWifi());
         Assertions.assertEquals(expectedColorAbility, p.canPrintDifferentColor());
         Assertions.assertEquals(expectedBusinessAbility, p.canUseForBusiness());
-
-
     }
 }
