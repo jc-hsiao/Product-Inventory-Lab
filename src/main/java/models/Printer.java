@@ -57,7 +57,7 @@ public class Printer {
         this.inkType = inkType;
     }
 
-    public boolean CanWorkWithWifi() {
+    public boolean canWorkWithWifi() {
         return canConnectWifi;
     }
 

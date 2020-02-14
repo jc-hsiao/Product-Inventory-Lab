@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class PrinterServiceTest {
     PrinterService ps1;
     Printer printer1, printer2, printer3, printer4;
@@ -63,7 +65,7 @@ public class PrinterServiceTest {
         String actualName = p.getName();
         String actualBrand = p.getBrand();
         String actualInkType = p.getInkType();
-        boolean actualWifiAbility = p.CanWorkWithWifi();
+        boolean actualWifiAbility = p.canWorkWithWifi();
         boolean actualColorAbility = p.canPrintDifferentColor();
         boolean actualBusinessAbility = p.canUseForBusiness();
 
@@ -78,8 +80,15 @@ public class PrinterServiceTest {
 
     @Test
     public void findTest(){
-        Printer expectedPrinter = printer2;
-        Assertions.assertEquals(expectedPrinter, ps1.findPrinter(2));
+        //---------this won't work because id is static:---------
+        //Printer expectedPrinter = printer4;
+        //Assertions.assertEquals(expectedPrinter, ps1.findPrinter(4));
+        //-------------------------------------------------------
+
+        Printer expectedPrinter = printer3;
+        int id = ps1.findAll()[2].getId();
+        Printer actualPrinter = ps1.findPrinter(id);
+        Assertions.assertEquals(expectedPrinter, actualPrinter );
     }
 
     @Test
@@ -109,8 +118,33 @@ public class PrinterServiceTest {
 
     @Test
     public void removeTest2(){
-        Assertions.assertFalse(ps1.delete(9));
+        Assertions.assertFalse(ps1.delete(99));
     }
+
+    /*@Test
+    public void writeTest() throws IOException {
+        ps1.write();
+    }*/
+    //worked but will print a weird 5 at the beginning
+
+    /*@Test
+    public void readTest() throws IOException {
+        ps1.loadData();
+    }*/
+    //worked, print without problem
+
+
+    @Test
+    public void JwriteTest() throws IOException {
+        ps1.jsonWrite();
+    }
+
+
+    @Test
+    public void JreadTest() throws IOException {
+        ps1.jsonLoadData();
+    }
+
 
 
 }

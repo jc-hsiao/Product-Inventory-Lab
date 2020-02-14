@@ -32,7 +32,7 @@ public class PrinterTest {
         Assertions.assertEquals(expectedName, p.getName());
         Assertions.assertEquals(expectedBrand, p.getBrand());
         Assertions.assertEquals(expectedInkType, p.getInkType());
-        Assertions.assertEquals(expectedWifiAbility, p.CanWorkWithWifi());
+        Assertions.assertEquals(expectedWifiAbility, p.canWorkWithWifi());
         Assertions.assertEquals(expectedColorAbility, p.canPrintDifferentColor());
         Assertions.assertEquals(expectedBusinessAbility, p.canUseForBusiness());
     }
