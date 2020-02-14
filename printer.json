@@ -1,0 +1,21 @@
+[ {
+  "id" : 21,
+  "name" : "Canon PIXMA TR4520 Color Ink-jet Multifunction printer",
+  "brand" : "Canon",
+  "inkType" : "Inkjet"
+}, {
+  "id" : 22,
+  "name" : "HP OfficeJet Pro 6978 InkJet All-In-One Printer",
+  "brand" : "HP",
+  "inkType" : "Inkjet"
+}, {
+  "id" : 23,
+  "name" : "HP LaserJet Pro MFP M281fdw Color Laser",
+  "brand" : "HP",
+  "inkType" : "Laser"
+}, {
+  "id" : 24,
+  "name" : "Brother - MFC-L2710DW Wireless Black-and-White All-in-One Laser Printer - Black",
+  "brand" : "Brother",
+  "inkType" : "Laser"
+} ]
